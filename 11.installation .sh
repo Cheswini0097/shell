@@ -18,4 +18,4 @@ then
     then
         echo "Git installion is not sucess"
         exit 1
-fi
+    fi
