@@ -17,7 +17,7 @@ then
     then
         echo "git installion is not sucess"
         exit 1
-else 
-    echo "git is already installed noting to do"
+    else 
+        echo "git is already installed noting to do"
 
-fi
+    fi
