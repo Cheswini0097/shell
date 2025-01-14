@@ -8,6 +8,7 @@ then
     echo "run the script with root privilage"
     exit 1
 fi
+
 dnf list installed git
 
 if [ $? -ne 0 ]
