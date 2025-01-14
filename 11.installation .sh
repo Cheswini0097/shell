@@ -7,3 +7,4 @@ if [ $USERID -ne 0 ]
 then
     echo "Run the script with the Root privilages"
     exit 1
+fi
