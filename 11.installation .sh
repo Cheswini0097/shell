@@ -20,7 +20,7 @@ then
         echo "Git installion is not sucess"
         exit 1
     else
-        echo "Git  installion is sucess:
+        echo "Git  installion is sucess"
 
     fi
 else
