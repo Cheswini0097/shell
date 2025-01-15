@@ -6,6 +6,7 @@ CHECK_ROOT(){
     then
         echo "Run the scritp with the root privilage"
         exit 1
+    fi
 }
 VALIDATE(){
     if [ $1 -ne 0 ]
