@@ -8,7 +8,7 @@ CHECK_ROOT(){
         exit 1
 }
 VALIDATE(){
-    if [$1 -ne 0 ]
+    if [ $1 -ne 0 ]
     then
         echo "$2 is failed...."
         exit 1
