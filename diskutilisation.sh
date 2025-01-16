@@ -22,7 +22,7 @@ while IFS= read -r line
 do 
     USAGE=$(echo $line)
     PARTITION=$(echo $line)
-    if [if $USAGE is -ge $DISK_THRESHOLD]
+    if [$USAGE is -ge $DISK_THRESHOLD]
     then
         echo "$PARTITION is more than $DISK_THRESHOLD, current value is: $USAGE, please check the partion"
     fi
