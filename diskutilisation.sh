@@ -8,6 +8,6 @@ do
     PARTITION=$(echo $line | awk '{print $7}')
     if [ "$USAGE" -ge "$DISK_THRESHOLD" ]
     then
-        echo "$PARTITION is more than $DISK_THRESHOLD%, current value is: $USAGE%, please check the partition"
+        echo "$PARTITION is more than $DISK_THRESHOLD, current value is: $USAGE, please check the partition"
     fi
 done <<< "$DISK_USAGE"
