@@ -1,13 +1,14 @@
 #!/bin/bash
-DISK_USAGE=$(df -hT)
+DISK_USAGE+$(df -hT)
 DISK_THRESHOLD=5
 
+
 while IFS= read -r line
-do 
+do
     USAGE=$(echo $line | awk '{print $6}' | cut -d "%" -f1)
-    PARTITION=$(echo $line | awk '{print $7}')
-    if [ "$USAGE" -ge "$DISK_THRESHOLD" ]
+    PARTITION=$(echo $line |awk '{print $7}')
+    if [$USAGE -ge $PARTITION]
     then
-        echo "$PARTITION is more than $DISK_THRESHOLD, current value is: $USAGE, please check the partition"
-    fi
-done <<< "$DISK_USAGE"
+        echo "The $PARTITION is More than the $USAGE, The Current Disk Usage is: $USAGE, please clean the disk"check the file system"
+        fi
+done <<< $DISK_USAGE
