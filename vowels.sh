@@ -1,8 +1,7 @@
 #!/bin/bash
-read -p "Enter the String" string
-string=$(echo $string | tr '[:upper:]' '[:lower:]' )
-vowels=$(echo $string | grep  "[aeiou]" $string)
-echo "vovels in the string are: " , $vowels
-
-|
-
+read -p "enter the string: " String
+string=$(echo $string  | tr '[:upper:]' '[:lower:]')
+vowels_count=$(echo $string | grep -o -i "[aeiou]" | wc -l)
+vovels=$(echo $string | grep -o -i "[aeiou]")
+echo "number of vowels in the string: $vowels_count"
+echo "Vovels in the string: $vovels"  
