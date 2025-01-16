@@ -16,7 +16,7 @@
 
 
 DISK_USAGE=$(df -hT)
-DISK_THRESHOLD=5%
+DISK_THRESHOLD=5
 
 while IFS= read -r line
 do 
