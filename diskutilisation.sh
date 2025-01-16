@@ -4,7 +4,7 @@ DISK_THRESHOLD=5
 
 while IFS= read -r line
 do 
-    USAGE=$(echo $line | awk '{print $6}' | cut -d "%" -f1)
+    USAGE=$(echo $line | awk '{print $6}' | sed 's/%//')
     PARTITION=$(echo $line | awk '{print $7}')
     if [ "$USAGE" -ge "$DISK_THRESHOLD" ]
     then
