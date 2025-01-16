@@ -8,4 +8,4 @@
 # sleep 100 &
 # echo "PID of the last background command: $!"
 echo "All the variables passed through the script:  $@"
-echo "$*
+echo "$*"
